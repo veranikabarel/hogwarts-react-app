@@ -1,0 +1,7 @@
+.col {
+    text-align: center;
+}
+
+.col>h1 {
+    font-family: 'Cinzel', serif;
+}
