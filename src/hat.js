@@ -11,11 +11,9 @@ const Hat = () => {
                 let houseName = data;
                 document
                     .getElementById("place")
-                    .innerHTML = {
-                    houseName
-                };
+                    .innerHTML = houseName;
             })
-            .catch(error => console.log('błąd: ', error))
+            .catch(error => console.log('Error ', error))
     };
 
     return (
@@ -23,9 +21,11 @@ const Hat = () => {
             <div className="row">
                 <div className="col">
                     <img src={hat} alt={"hat"}/>
-                    <button className= "btn btn-outline-dark" onClick={beSorted}>Be Sorted</button>
+                    <button className="btn btn-outline-dark" onClick={beSorted}>Get Sorted</button>
                 </div>
-                <div className="col" id="place"></div>
+                <div className="col d-flex align-items-center">
+                    <h1 className="nameOfHouseHeading" id="place"></h1>
+                </div>
             </div>
         </div>
     );

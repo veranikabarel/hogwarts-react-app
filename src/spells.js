@@ -4,7 +4,7 @@ import './spells.css';
 const Spells = () => {
 
     const key = '$2a$10$T.PmsIULcnz1o3Cbl.XBHO/kjyJ3ZWOKETv4VD5WMaxwQfA16C4p6';
-    const ul = document.getElementById('spells');
+
     const url = new URL('https://www.potterapi.com/v1/spells/'),
         params = {
             key: key
@@ -24,11 +24,12 @@ const Spells = () => {
     fetch(url, {key: key}).then((resp) => resp.json())
         .then(function (data) {
             let spells = data;
-            return spells.map(function (spell) {
+            const ul = document.getElementById('spells');
+            spells.map(function (spell) {
                 let li = createNode('li');
                 li.innerHTML = `${spell.spell} : ${spell.type}, ${spell.effect}`;
                 append(ul, li);
-            })
+            });
         })
         .catch(error => console.log('błąd: ', error));
 

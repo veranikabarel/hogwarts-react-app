@@ -6,7 +6,6 @@ const Houses = () => {
         <div>
             <div className="row">
                 <div className="col">
-
                     <button
                         className=" btn btn-outline-dark buttonHouses gryffindorButton"
                         type="button"

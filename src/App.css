@@ -1,26 +1,21 @@
 body {
-  background-color: #f7f6f4;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-color: #f7f6f4;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 ul li {
-  display: inline;
-  margin: 25px;
-  text-align: center;
+    display: inline;
+    margin: 25px;
+    text-align: center;
 }
 
-.nav-item>a {
-  color: #393d50;
-  font-family: 'Cinzel', serif;
-  letter-spacing: 3px;
+.nav-item > a {
+    color: #393d50;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
 }
 
 div.a {
-  color: #271617;
-}
-
-h1,
-p {
-  font-family: Lato;
+    color: #271617;
 }
