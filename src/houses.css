@@ -1,0 +1,25 @@
+.buttonHouses {
+    margin: 25px;
+}
+
+.buttonHouses:focus {
+    box-shadow: none;
+    text-decoration: none;
+}
+
+.gryffindorButton:hover {
+    background: linear-gradient(to right, #eeba30 0%, #740001 100%);
+}
+
+.slytherinButton:hover {
+    background: linear-gradient(to right, #a1a1a1 0%, #06400a 100%);
+}
+
+.hufflepuffButton:hover {
+    background: linear-gradient(to right, #ecb939 0%, #000000 100%);
+}
+
+.ravenclawButton:hover {
+    background: linear-gradient(to right, #996633 0%, #0033cc 100%);
+}
+

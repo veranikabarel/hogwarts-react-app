@@ -5,6 +5,7 @@ import Home from './home';
 import Hat from './hat';
 import Spells from './spells';
 import Houses from './houses';
+import Characters from './characters';
 import './App.css';
 
 class App extends Component {
@@ -18,13 +19,16 @@ class App extends Component {
                             <Link to="/">home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Hat">the sorting hat</Link>
+                            <Link to="/hat">the sorting hat</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/spells">spells</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/Houses">houses</Link>
+                            <Link to="/houses">houses</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/characters">characters</Link>
                         </li>
                     </ul>
 
@@ -32,6 +36,7 @@ class App extends Component {
                     <Route path="/hat" component={Hat}/>
                     <Route path="/spells" component={Spells}/>
                     <Route path="/houses" component={Houses}/>
+                    <Route path="/characters" component={Characters}/>
 
                 </div >
             </Router>
