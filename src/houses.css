@@ -20,6 +20,22 @@
 }
 
 .ravenclawButton:hover {
-    background: linear-gradient(to right, #996633 0%, #0033cc 100%);
+    background: linear-gradient(to right, #996633 0%, #0066cc 100%);
+}
+
+.card {
+    margin: 2px;
+    margin: 0 auto; 
+    float: none; 
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+   
 }
 

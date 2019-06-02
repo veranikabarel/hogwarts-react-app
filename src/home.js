@@ -7,7 +7,7 @@ const Home = () => {
         <div className="jumbotron-fluid">
             <div className="container">
                 <div className="row">
-                    <div className="col">
+                    <div className="col align-self-center">
                         <h1 className="display-4">Welcome to the Wizarding World of Harry Potter!</h1>
                     </div>
                     <div className="col">

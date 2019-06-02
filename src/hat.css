@@ -1,6 +1,17 @@
 img {
-    height: 400px;
-    width: 450px;
+    height: 300px;
+    width: 350px;
+}
+
+.sortingHatQuote {
+    letter-spacing: 3px;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+}
+
+.sortinHatButton:focus {
+    box-shadow: none;
+    text-decoration: none;
 }
 
 button {

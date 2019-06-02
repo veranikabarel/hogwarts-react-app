@@ -1,4 +1,5 @@
 import React from 'react';
+import wand from './wand.gif';
 import './spells.css';
 
 const Spells = () => {
@@ -27,17 +28,25 @@ const Spells = () => {
             const ul = document.getElementById('spells');
             spells.map(function (spell) {
                 let li = createNode('li');
-                li.innerHTML = `${spell.spell} : ${spell.type}, ${spell.effect}`;
+                li.innerHTML = `${spell.spell} : ${spell.effect}`;
                 append(ul, li);
             });
         })
         .catch(error => console.log('błąd: ', error));
 
     return (
-        <div className="container">
-            <ul className="list-group" id="spells"></ul>
+        <div>
+            <div clasName="container">
+                <div className="row">
+                    <div className="col align-self-center">
+                        <img className="spellsImage" src={wand} alt={"wand"}/>
+                        <ul className="list-group spells" id="spells"></ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    );
+
+    )
 }
 
 export default Spells;

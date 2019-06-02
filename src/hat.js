@@ -11,7 +11,7 @@ const Hat = () => {
                 let houseName = data;
                 document
                     .getElementById("place")
-                    .innerHTML = houseName;
+                    .innerHTML = (`You might belong to...${houseName}!`);
             })
             .catch(error => console.log('Error ', error))
     };
@@ -21,7 +21,14 @@ const Hat = () => {
             <div className="row">
                 <div className="col">
                     <img src={hat} alt={"hat"}/>
-                    <button className="btn btn-outline-dark" onClick={beSorted}>Get Sorted</button>
+                    <p className = "sortingHatQuote">Now slip me snug around your ears,
+                        <br></br>
+                        I've never yet been wrong,<br></br>
+                        I'll have alook inside your mind
+                        <br></br>
+                        And tell where you belong!</p>
+                    <br></br>
+                    <button className="btn btn-outline-dark sortinHatButton" onClick={beSorted}>Get Sorted</button>
                 </div>
                 <div className="col d-flex align-items-center">
                     <h1 className="nameOfHouseHeading" id="place"></h1>

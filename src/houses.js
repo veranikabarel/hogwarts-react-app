@@ -2,84 +2,52 @@ import React from 'react';
 import './houses.css';
 
 const Houses = () => {
+    const key = '$2a$10$2rQESbw867XLuzli.BEiKO3fJqGid1E75vSLsy38DUo3/ypMJ0jTO';
+    const url = new URL('https://www.potterapi.com/v1/houses'),
+        params = {
+            key: key
+        }
+
+    const createNode = (element) => {
+        return document.createElement(element);
+    }
+    const append = (parent, el) => {
+        return parent.appendChild(el);
+    }
+
+    Object
+        .keys(params)
+        .forEach(key => url.searchParams.append(key, params[key]));
+
+    fetch(url, {key: key}).then((resp) => resp.json())
+        .then(function (data) {
+            let house = data;
+            const ul = document.getElementById('houses');
+            house.map(function (house) {
+                let col = createNode('div'),
+                    div = createNode('div'),
+                    divContent = createNode('div'),
+                    h1 = createNode('h1'),
+                    p = createNode('p');
+                col.className = "col"
+                div.className = "card w-50"
+                divContent.className = "card-body"
+                h1.className = "card-title"
+                p.className = "card-text"
+                h1.innerHTML = `${house.name}`;
+                p.innerHTML = `Founder: ${house.founder} <br> Head of House:  ${house.headOfHouse} <br> House values: ${house.values}<br> House colors: ${house.colors} `;
+                append(col, div);
+                append(div, divContent);
+                append(divContent, h1);
+                append(divContent, p);
+                append(ul, div);
+            })
+        })
+        .catch(error => console.log('błąd: ', error));
+
     return (
-        <div>
-            <div className="row">
-                <div className="col">
-                    <button
-                        className=" btn btn-outline-dark buttonHouses gryffindorButton"
-                        type="button"
-                        data-toggle="collapse"
-                        href="#multiCollapseExample1"
-                        aria-expanded="false"
-                        aria-controls="multiCollapseExample1">Gryffindor</button>
-                </div>
-                <div className="col">
-                    <button
-                        className="btn btn-outline-dark buttonHouses hufflepuffButton"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#multiCollapseExample2"
-                        aria-expanded="false"
-                        aria-controls="multiCollapseExample2">Hufflepuff</button>
-                </div>
-                <div className="col">
-                    <button
-                        className="btn btn-outline-dark buttonHouses ravenclawButton"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#multiCollapseExample3"
-                        aria-expanded="false"
-                        aria-controls="multiCollapseExample3">Ravenclaw</button>
-                </div>
-                <div className="col">
-
-                    <button
-                        className="btn btn-outline-dark buttonHouses slytherinButton"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#multiCollapseExample4"
-                        aria-expanded="false"
-                        aria-controls="multiCollapseExample4">Slytherin</button>
-                </div>
-
-            </div>
-            <div className="row">
-                <div className="col">
-                    <div className="collapse multi-collapse" id="multiCollapseExample1">
-                        <div className="card card-body">
-                            <ul></ul>
-                        </div>
-                    </div>
-
-                </div>
-                <div className="col">
-                    <div className="collapse multi-collapse" id="multiCollapseExample2">
-                        <div className="card card-body">
-                            <ul></ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className="col">
-                    <div className="collapse multi-collapse" id="multiCollapseExample3">
-                        <div className="card card-body">
-                            <ul></ul>
-                        </div>
-                    </div>
-
-                </div>
-
-                < div className="col">
-                    <div className="collapse multi-collapse" id="multiCollapseExample4">
-                        <div className="card card-body">
-                            <ul></ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div className="container">
+            <div className="row" id="houses"></div>
         </div>
 
     )

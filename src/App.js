@@ -9,6 +9,7 @@ import Characters from './characters';
 import './App.css';
 
 class App extends Component {
+    
     render() {
         return (
             <Router>
