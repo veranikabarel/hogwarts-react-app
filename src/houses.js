@@ -43,13 +43,12 @@ const Houses = () => {
                 append(ul, div);
             })
         })
-        .catch(error => console.log('błąd: ', error));
+        .catch(error => console.log('Uuups, something went wrong! ', error));
 
     return (
         <div className="container">
             <div className="row" id="houses"></div>
         </div>
-
     )
 }
 

@@ -14,7 +14,6 @@ class App extends Component {
         return (
             <Router>
                 <div className="container">
-
                     <ul className="navbar">
                         <li className="nav-item">
                             <Link to="/">home</Link>

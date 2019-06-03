@@ -1,73 +1,55 @@
 import React from 'react';
 import './characters.css';
 
-const key = '$2a$10$2rQESbw867XLuzli.BEiKO3fJqGid1E75vSLsy38DUo3/ypMJ0jTO';
-
-class Characters extends React.Component {
-
-    state = {
-        name: undefined,
-        house: undefined,
-        bloodStatus: undefined,
-        wand: undefined,
-        dumbledoresArmy: undefined,
-        orderOfThePhoenix: undefined
-    }
-
-    getCharacter() {
-
-        const url = new URL('https://www.potterapi.com/v1/characters');
-        const params = {
+const Characters = () => {
+    const key = '$2a$10$2rQESbw867XLuzli.BEiKO3fJqGid1E75vSLsy38DUo3/ypMJ0jTO';
+    const url = new URL('https://www.potterapi.com/v1/characters'),
+        params = {
             key: key
         }
-        Object
-            .keys(params)
-            .forEach(key => url.searchParams.append(key, params[key]))
 
-        fetch(url, {key: key}).then((resp) => resp.json())
-            .then(function (data) {
-                console.log(data);
-                this.setState({
-                    name: data.name,
-                    house: data.house,
-                    bloodStatus: data.bloodStatus,
-                    wand: data.wand,
-                    dumbledoresArmy: data.dumbledoresArmy,
-                    orderOfThePhoenix: data.orderOfThePhoenix,
-                    error: ''
-                });
-
-            });
+    const createNode = (element) => {
+        return document.createElement(element);
+    }
+    const append = (parent, el) => {
+        return parent.appendChild(el);
     }
 
-    render() {
-        return (
-            <div className="row">
-                <div className="col">
-                    <h3 className="charactersHeading">The wizarding world is filled with memorable
-                        characters. If they have a name, you’ll find them here.</h3>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input
-                            onSubmit={this.props.getCharacter}
-                            className="form-control-lg"
-                            type="search"
-                            placeholder="Enter the name"
-                            aria-label="Search"></input>
-                        <button className="btn" type="submit">Search</button>
-                    </form>
-                </div>
+    Object
+        .keys(params)
+        .forEach(key => url.searchParams.append(key, params[key]));
 
-                <div className="col">
-                    <p>{this.props.name}</p>
-                    <p>{this.props.house}</p>
-                    <p>{this.props.bloodStatus}</p>
-                    <p>{this.props.wand}</p>
-                    <p>{this.props.dumbledoresArmy}</p>
-                    <p>{this.props.orderOfThePhoenix}</p>
-                </div>
-            </div>
-        )
-    }
+    fetch(url, {key: key}).then((resp) => resp.json())
+        .then(function (data) {
+            let character = data;
+            const ul = document.getElementById('characters');
+            character.map(function (character) {
+                let col = createNode('div'),
+                    div = createNode('div'),
+                    divContent = createNode('div'),
+                    h1 = createNode('h1'),
+                    p = createNode('p');
+                col.className = "col"
+                div.className = "card w-50"
+                divContent.className = "card-body"
+                h1.className = "card-title"
+                p.className = "card-text"
+                h1.innerHTML = `${character.name}`;
+                p.innerHTML = `School: ${character.school} <br> Blood status:  ${character.bloodStatus} <br> House: ${character.house}<br> Wand: ${character.wand} `;
+                append(col, div);
+                append(div, divContent);
+                append(divContent, h1);
+                append(divContent, p);
+                append(ul, div);
+            })
+        })
+        .catch(error => console.log('Uuups, something went wrong! ', error));
+
+    return (
+        <div className="container">
+            <div className="row" id="characters"></div>
+        </div>
+    )
 }
 
 export default Characters;

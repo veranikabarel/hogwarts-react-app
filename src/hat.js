@@ -13,7 +13,7 @@ const Hat = () => {
                     .getElementById("place")
                     .innerHTML = (`You might belong to...${houseName}!`);
             })
-            .catch(error => console.log('Error ', error))
+            .catch(error => console.log('Uuups, something went wrong! ', error))
     };
 
     return (

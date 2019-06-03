@@ -38,7 +38,7 @@ const Spells = () => {
         <div>
             <div clasName="container">
                 <div className="row">
-                    <div className="col align-self-center">
+                    <div className="col">
                         <img className="spellsImage" src={wand} alt={"wand"}/>
                         <ul className="list-group spells" id="spells"></ul>
                     </div>
