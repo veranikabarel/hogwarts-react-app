@@ -11,7 +11,7 @@
 * [Contact](#contact)
 
 ## General info
-There is an app for true hogwarts fans, where you can find all information about the wizarding world. This app is a project made by me for Front End Developer course I took in WSB University. Check the demo [here](https://evening-waters-91734.herokuapp.com/characters).
+There is an app for true hogwarts fans, where you can find all information about the wizarding world. This app is a project made by me for Front End Developer course I took in WSB University. Check the demo [here](https://evening-waters-91734.herokuapp.com/).
 
 ## Screenshots
 []()
