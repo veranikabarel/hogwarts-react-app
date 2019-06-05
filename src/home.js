@@ -1,21 +1,17 @@
 import React from 'react';
+import desktopImage from './hogwarts.png';
 import './home.css';
-import logo from './logo.png';
 
 const Home = () => {
+    const imageUrl = desktopImage;
+
     return (
-        <div className="jumbotron-fluid">
-            <div className="container">
-                <div className="row">
-                    <div className="col align-self-center">
-                        <h1 className="display-4">Welcome to the Wizarding World of Harry Potter!</h1>
-                    </div>
-                    <div className="col">
-                        <img className="homePageImage" src={logo} alt={"logo"}/>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div
+            className="homeImage"
+            style={{
+            backgroundImage: `url(${imageUrl})`
+        }}></div>
+
     );
 }
 

@@ -8,40 +8,37 @@ import Houses from './houses';
 import Characters from './characters';
 import './App.css';
 
-class App extends Component {
-    
-    render() {
-        return (
-            <Router>
-                <div className="container">
-                    <ul className="navbar">
-                        <li className="nav-item">
-                            <Link to="/">home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/hat">the sorting hat</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/spells">spells</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/houses">houses</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/characters">characters</Link>
-                        </li>
-                    </ul>
+const App = () => {
 
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/hat" component={Hat}/>
-                    <Route path="/spells" component={Spells}/>
-                    <Route path="/houses" component={Houses}/>
-                    <Route path="/characters" component={Characters}/>
+    return (
+        <Router>
 
-                </div >
-            </Router>
-        );
-    }
+            <ul className="navbar">
+                <li className="nav-item">
+                    <Link to="/">home</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/hat">the sorting hat</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/spells">spells</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/houses">houses</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/characters">characters</Link>
+                </li>
+            </ul>
+
+            <Route exact path="/" component={Home}/>
+            <Route path="/hat" component={Hat}/>
+            <Route path="/spells" component={Spells}/>
+            <Route path="/houses" component={Houses}/>
+            <Route path="/characters" component={Characters}/>
+
+        </Router>
+    );
 }
 
 export default App;

@@ -1,16 +1,6 @@
-.col {
-    text-align: center;
-}
-
-.col > h1,
-h2,
-h3 {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
-}
-
-.homePageImage {
-    height: 400px;
-    width: 450px;
-
+.homeImage {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
