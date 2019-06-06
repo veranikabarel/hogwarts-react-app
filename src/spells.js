@@ -1,5 +1,4 @@
 import React from 'react';
-import wand from './wand.gif';
 import './spells.css';
 
 const Spells = () => {
@@ -27,25 +26,31 @@ const Spells = () => {
             let spells = data;
             const ul = document.getElementById('spells');
             spells.map(function (spell) {
-                let li = createNode('li');
-                li.innerHTML = `${spell.spell} : ${spell.effect}`;
-                append(ul, li);
-            });
+                let col = createNode('div'),
+                    div = createNode('div'),
+                    divContent = createNode('div'),
+                    h1 = createNode('h1'),
+                    p = createNode('p');
+                col.className = "col"
+                div.className = "card w-50"
+                divContent.className = "card-body"
+                h1.className = "card-title"
+                p.className = "card-text"
+                h1.innerHTML = `${spell.spell}`;
+                p.innerHTML = `${spell.effect} `;
+                append(col, div);
+                append(div, divContent);
+                append(divContent, h1);
+                append(divContent, p);
+                append(ul, div);
+            })
         })
-        .catch(error => console.log('błąd: ', error));
+        .catch(error => console.log('Uuups, something went wrong! ', error));
 
     return (
-        <div>
-            <div clasName="container">
-                <div className="row">
-                    <div className="col">
-                        <img className="spellsImage" src={wand} alt={"wand"}/>
-                        <ul className="list-group spells" id="spells"></ul>
-                    </div>
-                </div>
-            </div>
+        <div className="container">
+            <div className="row spellsPage" id="spells"></div>
         </div>
-
     )
 }
 
