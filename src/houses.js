@@ -24,20 +24,22 @@ const Houses = () => {
             let house = data;
             const ul = document.getElementById('houses');
             house.map(function (house) {
-                let col = createNode('div'),
-                    div = createNode('div'),
+                let div = createNode('div'),                    
                     divContent = createNode('div'),
+                    img = createNode ('img'),
                     h1 = createNode('h1'),
                     p = createNode('p');
-                col.className = "col"
-                div.className = "card w-50"
-                divContent.className = "card-body"
-                h1.className = "card-title"
-                p.className = "card-text"
+
+                div.className = "ui card"              
+                divContent.className = "content"
+                img.className = "ui centered image" 
+                h1.className = "header"
+                p.className = "description"
                 h1.innerHTML = `${house.name}`;
                 p.innerHTML = `Founder: ${house.founder} <br> Head of House:  ${house.headOfHouse} <br> House values: ${house.values}<br> House colors: ${house.colors} `;
-                append(col, div);
+
                 append(div, divContent);
+                append(divContent, img);
                 append(divContent, h1);
                 append(divContent, p);
                 append(ul, div);
@@ -46,8 +48,8 @@ const Houses = () => {
         .catch(error => console.log('Uuups, something went wrong! ', error));
 
     return (
-        <div className="container">
-            <div className="row" id="houses"></div>
+        <div className="ui centered container">
+            <div className="ui two cards" id="houses"></div>
         </div>
     )
 }

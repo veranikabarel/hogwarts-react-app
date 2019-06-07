@@ -11,7 +11,6 @@ const Home = () => {
             style={{
             backgroundImage: `url(${imageUrl})`
         }}></div>
-
     );
 }
 

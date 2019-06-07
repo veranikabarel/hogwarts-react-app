@@ -12,6 +12,7 @@ const App = () => {
 
     return (
         <Router>
+            <div>
 
             <ul className="navbar">
                 <li className="nav-item">
@@ -36,7 +37,7 @@ const App = () => {
             <Route path="/spells" component={Spells}/>
             <Route path="/houses" component={Houses}/>
             <Route path="/characters" component={Characters}/>
-
+            </div>
         </Router>
     );
 }

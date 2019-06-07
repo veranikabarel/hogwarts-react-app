@@ -24,19 +24,18 @@ const Characters = () => {
             let character = data;
             const ul = document.getElementById('characters');
             character.map(function (character) {
-                let col = createNode('div'),
-                    div = createNode('div'),
+                let div = createNode('div'),
                     divContent = createNode('div'),
                     h1 = createNode('h1'),
                     p = createNode('p');
-                col.className = "col"
-                div.className = "card w-50"
-                divContent.className = "card-body"
-                h1.className = "card-title"
-                p.className = "card-text"
+
+                div.className = "ui card"
+                divContent.className = "content"
+                h1.className = "header"
+                p.className = "description"
                 h1.innerHTML = `${character.name}`;
                 p.innerHTML = `School: ${character.school} <br> Blood status:  ${character.bloodStatus} <br> House: ${character.house}<br> Wand: ${character.wand} `;
-                append(col, div);
+
                 append(div, divContent);
                 append(divContent, h1);
                 append(divContent, p);
@@ -46,8 +45,8 @@ const Characters = () => {
         .catch(error => console.log('Uuups, something went wrong! ', error));
 
     return (
-        <div className="container">
-            <div className="row" id="characters"></div>
+        <div className="ui centered container">
+            <div className="ui two cards" id="characters"></div>
         </div>
     )
 }
