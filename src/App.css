@@ -1,9 +1,15 @@
+h1 {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
 .ui.fluid.five.item.stackable.menu {
-    background-color: #f7f6f4;
+    background-color: #F3F3F3;
 }
 
 .ui.fluid.five.item.stackable.menu > li {
-    background-color: #f7f6f4;
+    background-color: #F3F3F3;
     font-family: 'Cinzel', serif;
     letter-spacing: 3px;
     margin: 25px;
@@ -17,8 +23,32 @@ li > a:hover {
 }
 
 body {
-    background-color: #f7f6f4;
+    background-color: #F3F3F3;
 }
+
+/* HOME */
+
+.homePagePic {
+    height: 450px;
+    width: 400px;
+}
+.nameOfHouseHeading {
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* SORTING */
+
+.sortingHatQuote {
+    margin-top: 25px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    line-height: 35px;
+}
+
+/* HOUSES */
 
 .nameOfHouseHeading,
 .ui.button.sortinHatButton,
@@ -30,20 +60,11 @@ body {
 
 .ui.card > .content,
 .ui.cards > .card > .content {
-    background-color: #f7f6f4;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #F3F3F3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
 }
 
 p {
     font-family: 'Raleway', sans-serif;
-}
-
-.nameOfHouseHeading {
-    text-align: center;
-    font-weight: lighter;
-}
-
-.sortingHatQuote {
-    margin-top: 25px;
 }

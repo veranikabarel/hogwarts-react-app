@@ -1,5 +1,4 @@
 import React from 'react';
-import hat from '../assets/sortingHat.jpg';
 import './hat.css';
 
 const Hat = () => {
@@ -22,9 +21,7 @@ const Hat = () => {
 
             <div className="ui stackable very relaxed two column grid">
                 <div className="center aligned column">
-                    <img src={hat} alt={"hat"}/>
-
-                    <p className="sortingHatQuote">Now slip me snug around your ears,
+                        <p className="sortingHatQuote">Now slip me snug around your ears,
                         <br></br>
                         I've never yet been wrong,<br></br>
                         I'll have alook inside your mind
@@ -41,7 +38,7 @@ const Hat = () => {
                     </div>
                 </div>
 
-                <div className="center middle aligned column">
+                <div className="middle aligned column">
 
                     <h1 className="nameOfHouseHeading" id="place"></h1>
                 </div>
