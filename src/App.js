@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
-import Home from './home';
-import Hat from './hat';
-import Spells from './spells';
-import Houses from './houses';
-import Characters from './characters';
+import Home from './components/home';
+import Hat from './components/hat';
+import Spells from './components/spells';
+import Houses from './components/houses';
+import Characters from './components/characters';
 import './App.css';
 
 const App = () => {
@@ -13,21 +13,20 @@ const App = () => {
     return (
         <Router>
             <div>
-
-            <ul className="navbar">
-                <li className="nav-item">
+            <ul className="ui fluid five item stackable menu">
+                <li className="item">
                     <Link to="/">home</Link>
                 </li>
-                <li className="nav-item">
+                <li className="item">
                     <Link to="/hat">the sorting hat</Link>
                 </li>
-                <li className="nav-item">
+                <li className="item">
                     <Link to="/spells">spells</Link>
                 </li>
-                <li className="nav-item">
+                <li className="item">
                     <Link to="/houses">houses</Link>
                 </li>
-                <li className="nav-item">
+                <li className="item">
                     <Link to="/characters">characters</Link>
                 </li>
             </ul>

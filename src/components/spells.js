@@ -1,5 +1,4 @@
 import React from 'react';
-import './spells.css';
 
 const Spells = () => {
 
@@ -47,8 +46,8 @@ const Spells = () => {
         .catch(error => console.log('Uuups, something went wrong! ', error));
 
     return (
-        <div className="ui centered container">
-            <div className="ui four cards" id="spells"></div>
+        <div className="ui container">
+            <div className="ui four stackable cards" id="spells"></div>
         </div>
     )
 }

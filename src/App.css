@@ -1,29 +1,49 @@
+.ui.fluid.five.item.stackable.menu {
+    background-color: #f7f6f4;
+}
+
+.ui.fluid.five.item.stackable.menu > li {
+    background-color: #f7f6f4;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+    margin: 25px;
+}
+
+li > a {
+    color: #000000;
+}
+li > a:hover {
+    color: #474d73;
+}
+
 body {
     background-color: #f7f6f4;
 }
 
-ul li {
-    display: inline;
-    margin: 25px;
-    text-align: center;
-}
-
-.nav-item > a {
-    color: #393d50;
+.nameOfHouseHeading,
+.ui.button.sortinHatButton,
+.ui.card > .content > .header,
+.ui.cards > .card > .content > .header {
     font-family: 'Cinzel', serif;
     letter-spacing: 3px;
 }
 
-div.a {
-    color: #271617;
-}
-
-.card-title {
-    font-size: 20px;
-}
-
-.card-body {
-    border-bottom: 1px solid black;
+.ui.card > .content,
+.ui.cards > .card > .content {
     background-color: #f7f6f4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
 }
 
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+.nameOfHouseHeading {
+    text-align: center;
+    font-weight: lighter;
+}
+
+.sortingHatQuote {
+    margin-top: 25px;
+}

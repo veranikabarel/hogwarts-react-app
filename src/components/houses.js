@@ -1,5 +1,5 @@
 import React from 'react';
-import './houses.css';
+
 
 const Houses = () => {
     const key = '$2a$10$2rQESbw867XLuzli.BEiKO3fJqGid1E75vSLsy38DUo3/ypMJ0jTO';
@@ -24,22 +24,24 @@ const Houses = () => {
             let house = data;
             const ul = document.getElementById('houses');
             house.map(function (house) {
-                let div = createNode('div'),                    
+                let div = createNode('div'),
+             
                     divContent = createNode('div'),
-                    img = createNode ('img'),
+
                     h1 = createNode('h1'),
                     p = createNode('p');
 
-                div.className = "ui card"              
+                div.className = "ui card"
+           
                 divContent.className = "content"
-                img.className = "ui centered image" 
+
                 h1.className = "header"
                 p.className = "description"
                 h1.innerHTML = `${house.name}`;
                 p.innerHTML = `Founder: ${house.founder} <br> Head of House:  ${house.headOfHouse} <br> House values: ${house.values}<br> House colors: ${house.colors} `;
 
+          
                 append(div, divContent);
-                append(divContent, img);
                 append(divContent, h1);
                 append(divContent, p);
                 append(ul, div);
@@ -48,8 +50,8 @@ const Houses = () => {
         .catch(error => console.log('Uuups, something went wrong! ', error));
 
     return (
-        <div className="ui centered container">
-            <div className="ui two cards" id="houses"></div>
+        <div className="ui container">
+            <div className="ui two stackable cards" id="houses"></div>
         </div>
     )
 }

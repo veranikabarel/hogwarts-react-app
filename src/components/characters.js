@@ -1,5 +1,4 @@
 import React from 'react';
-import './characters.css';
 
 const Characters = () => {
     const key = '$2a$10$2rQESbw867XLuzli.BEiKO3fJqGid1E75vSLsy38DUo3/ypMJ0jTO';
@@ -46,7 +45,7 @@ const Characters = () => {
 
     return (
         <div className="ui centered container">
-            <div className="ui two cards" id="characters"></div>
+            <div className="ui two stackable cards" id="characters"></div>
         </div>
     )
 }
