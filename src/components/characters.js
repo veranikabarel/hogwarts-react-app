@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {animateScroll as scroll} from 'react-scroll';
+import logo from '../assets/scrollsm.png';
 
 const key = '$2a$10$2rQESbw867XLuzli.BEiKO3fJqGid1E75vSLsy38DUo3/ypMJ0jTO';
 const url = new URL('https://www.potterapi.com/v1/characters'),
@@ -16,6 +18,11 @@ Object
     .forEach(key => url.searchParams.append(key, params[key]));
 
 class Characters extends Component {
+
+    scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+
     constructor() {
         super();
 
@@ -55,6 +62,7 @@ class Characters extends Component {
         return (
             <div className="ui centered container">
                 <div className="ui two stackable cards" id="characters"></div>
+                <img src={logo} className="scroll-logo" alt="scrollLogo" onClick={this.scrollToTop}/>
             </div>
         )
     }

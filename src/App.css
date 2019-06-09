@@ -26,6 +26,14 @@ body {
     background-color: #F3F3F3;
 }
 
+.scroll-logo {
+    float: right;
+    margin: 15px;
+}
+.scroll-logo:hover {
+    cursor: pointer;
+}
+
 /* HOME */
 
 .homePagePic {
@@ -45,15 +53,12 @@ body {
     letter-spacing: 3px;
     font-family: 'Raleway', sans-serif;
     font-style: italic;
-    line-height: 35px;
+    line-height: 20px;
 }
 .sortinHatButton:focus {
-    box-shadow: none;
     text-decoration: none;
-}
-
-button {
     font-family: 'Cinzel', serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nameOfHouseHeading {

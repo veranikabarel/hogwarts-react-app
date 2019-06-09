@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {animateScroll as scroll} from 'react-scroll';
+import logo from '../assets/scrollsm.png';
 
 const key = '$2a$10$T.PmsIULcnz1o3Cbl.XBHO/kjyJ3ZWOKETv4VD5WMaxwQfA16C4p6';
 const url = new URL('https://www.potterapi.com/v1/spells/'),
@@ -16,6 +18,10 @@ function append(parent, el) {
 }
 
 class Spells extends Component {
+    scrollToTop = () => {
+        scroll.scrollToTop();
+    };
+
     constructor() {
         super();
 
@@ -55,6 +61,7 @@ class Spells extends Component {
         return (
             <div className="ui container">
                 <div className="ui four stackable cards" id="spells"></div>
+                <img src={logo} className="scroll-logo" alt="Logo" onClick={this.scrollToTop}/>
             </div>
         )
     }
