@@ -14,10 +14,11 @@
 There is an app for true hogwarts fans, where you can find all information about the wizarding world. This app is a project made by me for Front End Developer course I took in WSB University. Check the demo [here](https://evening-waters-91734.herokuapp.com/).
 
 ## Screenshots
-[]()
+![](src/screenshots/home.png?raw=true)
 
 ## Technologies
 * [Create React App](https://github.com/facebook/create-react-app)
+* [Semantic UI](https://github.com/Semantic-Org)
 
 ## Setup
 In the project directory, you can run:
@@ -46,8 +47,8 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 
 ## Features
 * Get sorted to a Hogwart House 
-* Learn all the spell to become the greates wizard of All Time
-* Check information about Hogwarts Houses and characters
+* Learn all the spell to become the Greates Wizard of All Time
+* Check information about Hogwarts Houses and Characters
 
 ## Status
 Project is: _in progress_
