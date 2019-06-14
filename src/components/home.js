@@ -12,7 +12,7 @@ const Home = () => {
                     </blockquote>
                 </div>
                 <div className="center aligned column">
-                    <img className="homePagePic" src={logo} alt="car"></img>
+                    <img className="homePagePic" src={logo} alt="harry"></img>
                 </div>
             </div>
         </div>

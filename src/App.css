@@ -52,9 +52,9 @@ body {
     font-size: 10px;
     letter-spacing: 3px;
     font-family: 'Raleway', sans-serif;
-    font-style: italic;
     line-height: 20px;
 }
+
 .sortinHatButton:focus {
     text-decoration: none;
     font-family: 'Cinzel', serif;
